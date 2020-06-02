@@ -1,5 +1,5 @@
 server:
-  port: 18802
+  port: 18082
 spring:
   application:
     name: command-application
