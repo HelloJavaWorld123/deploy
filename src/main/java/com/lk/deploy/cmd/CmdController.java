@@ -1,4 +1,4 @@
-package com.lk.deploy;
+package com.lk.deploy.cmd;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +22,7 @@ public class CmdController {
         if (StringUtils.isEmpty(dir)) {
             return ResponseEntity.badRequest().body("缺少参数");
         }
-        String file_path = "/home/travis/repository";
+        String file_path = "/home/travis/repository"+dir;
         File file = new File(file_path);
         String[] cmds = new String[]{"sh","./build.sh"};
         try {
